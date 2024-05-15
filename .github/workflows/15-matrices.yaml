@@ -22,13 +22,9 @@ jobs:
         uses: "actions/setup-node@v4"
         with:
           node-version: ${{ matrix.node }}
-      - name: "Fail if experimental"
-        if: ${{ matrix.tag == 'experimental' }}
-        run: exit 1
       - name: "Perform some tests"
         run: |
           echo "Running tests on OS ${{ matrix.os }} and NodeJS ${{ matrix.node }}"
-          sleep 10
       - name: "Upload test results"
         run: echo "Uploading test results"
   include-example:
