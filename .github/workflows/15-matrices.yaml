@@ -5,7 +5,7 @@ jobs:
     name: ${{ matrix.os }}-${{ matrix.node }}
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
+      fail-fast: true # true is default
       matrix:
         node: [18.x, 20.x, 21.x]
         os:
