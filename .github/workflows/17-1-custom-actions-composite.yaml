@@ -19,11 +19,12 @@ jobs:
     steps:
       - name: "Checkout"
         uses: "actions/checkout@v4"
-      - name: "Setup NOde and NPM dependencies"
+      - name: "Setup Node and NPM dependencies"
         uses: ./.github/actions/composite-cache-deps
         with:
           working-dir: ${{ env.working-directory }}
           node-version: "20.x"
+          target-env: ${{ inputs.target-env }}
       - name: "Test"
         run: npm run test
       - name: "Build"
