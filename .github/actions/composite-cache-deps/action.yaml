@@ -6,9 +6,9 @@ inputs:
     description: "NodeJS version to use"
     default: "20.x"
   working-dir:
-    required: false
+    required: false # This is the default
     description: "The working directory of the application"
-    default: $PWD
+    default: .
 runs:
   using: composite
   steps:
