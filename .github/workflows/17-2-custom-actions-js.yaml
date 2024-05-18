@@ -1,4 +1,7 @@
 name: "17 - 2 - Custom Actions - JS"
+permissions:
+  contents: write
+  pull-requests: write
 on:
   workflow_dispatch:
     inputs:
