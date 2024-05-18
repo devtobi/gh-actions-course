@@ -8,14 +8,14 @@ on:
       target-branch:
         type: string
         default: "update-dependencies"
-      working-dir:
+      working-directory:
         type: string
         default: "17-custom-actions/react-app"
       debug:
         type: boolean
         required: false
         default: false
-run-name: "17 - 2 - Custom Actions - JS - Base: ${{ inputs.base-branch }} - Target: ${{ inputs.target-branch }} - Dir: ${{ inputs.working-dir }}"
+run-name: "17 - 2 - Custom Actions - JS - Base: ${{ inputs.base-branch }} - Target: ${{ inputs.target-branch }} - Dir: ${{ inputs.working-directory }}"
 jobs:
   dependency-update:
     runs-on: ubuntu-latest
@@ -27,6 +27,6 @@ jobs:
         with:
           base-branch: ${{ inputs.base-branch }}
           target-branch: ${{ inputs.target-branch }}
-          working-dir: ${{ inputs.working-dir }}
+          working-directory: ${{ inputs.working-directory }}
           debug: ${{ inputs.debug }}
           gh-token: ${{ secrets.GITHUB_TOKEN }}
