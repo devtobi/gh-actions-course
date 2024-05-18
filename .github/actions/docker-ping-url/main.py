@@ -11,8 +11,8 @@ def ping_url(url, delay, max_trials):
                 print(f"Website {url} is reachable.")
                 return True
         except requests.ConnectionError:
-            print(f"Website {url} is not reachable. Retrying in ${delay} seconds...")
-            time.sleep()
+            print(f"Website {url} is not reachable. Retrying in {delay} seconds...")
+            time.sleep(delay)
             trials += 1
         except requests.exceptions.MissingSchema:
             print(f"Invalid URL format: {url}. Make sure the URL has a valid schema.")
@@ -26,9 +26,7 @@ def run():
 
     website_reachable = ping_url(website_url, delay, max_trials)
     if not website_reachable:
-        raise Exception(f"Website {website_url} is malformed or unreachable.")
-    
-    print(f"Website {website_url} is reachable.")
+        raise Exception(f"Website {website_url} was malformed or unreachable. Execution failed.")
 
 if __name__ == "__main__":
     run()
