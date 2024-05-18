@@ -35,4 +35,4 @@ jobs:
           debug: ${{ inputs.debug }}
           gh-token: ${{ secrets.GITHUB_TOKEN }}
       - name: "Print custom action output"
-        run: 'echo "Updates available: ${{ steps.update-deps.outputs.updates-available }}'
+        run: 'echo "Updates available: ${{ steps.update-deps.outputs.updates-available }}"'
