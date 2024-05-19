@@ -1,1 +1,1 @@
-Repository containing all the code and examples for the GitHub actions course. CHANGED
+Repository containing all the code and examples for the GitHub actions course.
