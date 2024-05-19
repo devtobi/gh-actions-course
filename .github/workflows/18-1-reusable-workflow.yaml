@@ -25,9 +25,9 @@ jobs:
         id: build
         run: |
           echo "Building using directory ${{ inputs.target-directory }}"
-          echo "success" >> "$GITHUB_OUTPUT"
+          echo "build-status=success" >> "$GITHUB_OUTPUT"
       - name: "Deploy"
         id: deploy
         run: |
           echo "Deploying build artifacts"
-          echo "https://www.google.com" >> "$GITHUB_OUTPUT"
+          echo "url=https://www.google.com" >> "$GITHUB_OUTPUT"
